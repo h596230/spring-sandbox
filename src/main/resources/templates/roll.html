@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Roll</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mini.css/3.0.1/mini-default.min.css">
+</head>
+<body>
+    <form method="post" th:action="@{/roll}">
+        <button type="submit">Roll</button>
+      </form>
+    <p th:text="${result}" th:if="${result != null}"></p>
+    <a href="/students">See all students</a>
+    <a href="/">Register</a>
+</body>
+</html>

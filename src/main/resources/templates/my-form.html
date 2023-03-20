@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>My Form</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mini.css/3.0.1/mini-default.min.css">
+</head>
+<body>
+    <h1>My Form</h1>
+    <form action="#" th:action="@{/students}" th:object="${newStudent}" method="post">
+        <label>First name: <input type="text" th:field="*{firstName}" /></label><br/>
+        <label>Last Name: <input type="text" th:field="*{lastName}" /></label><br/>
+        <label>Course: <input type="text" th:field="*{course}" /></label><br/>
+        <input type="submit" value="Submit" />
+    </form>
+    <a href="/students">See all students</a>
+    <a href="/roll">Take a roll</a>
+</body>
+</html>
